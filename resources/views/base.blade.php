@@ -88,4 +88,13 @@
     .addcatebtnclr:hover {
         background-color: #B08C74;
     }
+
+    .dltbtnclr {
+        background-color: #3B2F2A;
+        color:#B08C74;
+    }
+
+    .dltbtnclr:hover {
+        background-color: #B08C74;
+    }
 </style>
