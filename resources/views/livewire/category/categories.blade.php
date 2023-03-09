@@ -1,11 +1,17 @@
 <div>
+    @if (session()->has('message'))
+        <div class="alert alert-success col-md-3 mx-auto mt-3 text-center">
+            {{ session('message') }}
+        </div>
+    @endif
+
    <div class="container">
         <div class="row">
             <div class="col">
                 <div class="col-md-6 mx-auto">
                     <button class="btn catebtnclr float-end mb-2" data-bs-toggle="modal" data-bs-target="#newCategoryModal">New Category</button>
                     <div class="mt-3">
-                        <table class="table table-bordered borderclr shadow">
+                        <table class="table table-bordered table-hover borderclr shadow">
                             <thead class="bghdcolor theadclr">
                                 <tr class="text-center">
                                     <th>Category</th>

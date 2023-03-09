@@ -20,13 +20,6 @@ class Create extends Component
         return view('livewire.posts.create');
     }
 
-    public function resetFields() {
-        $this->category_id  = '';
-        $this->author       = '';
-        $this->title        = '';
-        $this->content      = '';
-    }
-
     public function store() {
         $validatedData = $this->validate([
             'category_id'   => 'required',
@@ -39,6 +32,6 @@ class Create extends Component
 
         session()->flash('message', 'Post added');
 
-        $this->resetFields();
+        return redirect('/posts');
     }
 }

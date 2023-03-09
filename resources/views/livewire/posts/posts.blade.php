@@ -15,7 +15,7 @@
                         <option value="{{ $category->id }}">{{ $category->category }}</option>
                     @endforeach
                 </select>
-                <label for="caliber" class="form-label text-dark">Select a Category</label>
+                <label for="caliber" class="form-label text-dark">Category</label>
             </div>
         </div>
 
@@ -44,11 +44,11 @@
                         </div>
                     </div>
                 @endforeach
+                <div class="pagination justify-content-center mt-3">
+                    {{ $posts }}
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="offset-md-8 mt-3">
-        {{ $posts }}
-    </div>
 </div>

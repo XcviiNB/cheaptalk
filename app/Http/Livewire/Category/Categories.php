@@ -7,17 +7,18 @@ use Livewire\Component;
 
 class Categories extends Component
 {
-    public $categories, $category, $remarks;
+    public $category, $remarks;
+
+    public function tableOrder() {
+        $query = Category::latest('created_at');
+
+        $categories = $query->get();
+        return compact('categories');
+    }
 
     public function render()
     {
-        $this->categories = Category::all();
-        return view('livewire.category.categories');
-    }
-
-    public function resetFields() {
-        $this->category = '';
-        $this->remarks  = '';
+        return view('livewire.category.categories', $this->tableOrder());
     }
 
     public function store() {
@@ -30,6 +31,6 @@ class Categories extends Component
 
         session()->flash('message', 'Category has been added');
 
-        $this->resetFields();
+        return redirect('/categories');
     }
 }

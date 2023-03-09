@@ -40,11 +40,13 @@
     }
 
     .createbtnclr {
-        background-color: #D1B5A5;
+        background-color: #3B2F2A;
+        color: #D1B5A5;
     }
 
     .createbtnclr:hover {
-        background-color: #B08C74;
+        background-color: #D1B5A5;
+        color: #3B2F2A;
     }
 
     .borderclr {
@@ -56,13 +58,13 @@
     }
 
     .catebtnclr {
-        background-color: #D1B5A5;
-        color: #3B2F2A;
+        background-color: #3B2F2A;
+        color: #D1B5A5;
     }
 
     .catebtnclr:hover {
-        background-color: #3B2F2A;
-        color: #D1B5A5;
+        background-color: #D1B5A5;
+        color: #3B2F2A;
     }
 
     .postcardhdclr {
