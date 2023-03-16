@@ -19,14 +19,18 @@ class PostFactory extends Factory
     {
 
         static $id = 1;
+        $totalCategories = Category::count();
+        if ($id > $totalCategories) {
+            $id = 1;
+        }
         $category = Category::find($id);
         $id++;
 
         return [
-            'category_id'   => $category->id,
-            'author'        => fake()->name(),
-            'title'         => fake()->word(),
-            'content'       => fake()->sentences()
+            'category_id' => $category->id,
+            'author' => fake()->name(),
+            'title' => fake()->word(),
+            'content' => fake()->sentence
         ];
     }
 }
