@@ -14,8 +14,7 @@
                             <div class="col">
                                 <input type="text" class="form-control createcolor" placeholder="Title" wire:model="title">
                             </div>
-                            &nbsp;
-                            <div class="col-md-7 form-floating">
+                            <div class="mt-3 form-floating">
                                 <select class="form-select createcolor" wire:model="category_id">
                                     <option value="" disabled>Select a Category</option>
                                     <option selected hidden value=""></option>
@@ -25,6 +24,10 @@
                                 </select>
                                 <label for="caliber" class="form-label text-dark">Category</label>
                             </div>
+                        </div>
+
+                        <div class="mt-3">
+                            <input type="file" id="image" wire:model="image">
                         </div>
                         <div class="input-group input-group-lg mt-3">
                             <textarea class="form-control form-control-lg createcolor" placeholder="What's on your mind?" wire:model="content"></textarea>

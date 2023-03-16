@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string("author", 50);
             $table->string("title", 50);
             $table->string("content", 255);
+            $table->string("image")->nullable();
             $table->timestamps();
             $table->foreign('category_id')->references('id')->on('categories');
         });
