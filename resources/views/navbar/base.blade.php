@@ -26,12 +26,22 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/categories">Categories</a>
                     </li>
-                    <li class="nav-item">
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <button type="submit" class="nav-link" style="background: none; border: none;">Logout</button>
-                        </form>
+                    <li class="nav-item dropdown">
+                        @if(auth()->check())
+                            <a class="nav-link dropdown-toggle" href="#" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                User|{{ auth()->user()->name }}
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <form method="GET" action="{{ route('logout') }}">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item">Logout</button>
+                                    </form>
+                                </li>
+                            </ul>
+                        @endif
                     </li>
+
                 @endguest
             </ul>
         </div>

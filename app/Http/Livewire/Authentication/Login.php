@@ -13,14 +13,16 @@ class Login extends Component
         $this->validate([
             'email'     => 'required|email',
             'password'  => 'required|string'
+        ],
+        [
+            'email.required'    => 'Email is required',
+            'password.required' => 'Password is required'
         ]);
 
         $user = User::where('email', $this->email)->first();
 
         if (!$user) {
-            $this->errormsg = "Sorry your account is invalid";
-            $this->email    = "";
-            $this->password = "";
+            $this->errormsg = "Email does not exist.";
         } else {
             $login = auth()->attempt([
                 'email'     => $this->email,
@@ -28,19 +30,12 @@ class Login extends Component
             ]);
 
             if (!$login) {
-                $this->errormsg = "Invalid credentials";
-                $this->email    = "";
-                $this->password = "";
+                $this->errormsg = "Password is incorrect.";
             } else {
                 redirect('/');
             }
         }
     }
-
-    // public function clear() {
-    //     $this->email    = "";
-    //     $this->password = "";
-    // }
 
     public function render()
     {

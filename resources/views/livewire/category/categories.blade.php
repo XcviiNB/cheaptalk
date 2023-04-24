@@ -36,7 +36,7 @@
                                     <tr>
                                         <td class="text-center">{{ $category->category }}</td>
                                         <td>{{ $category->remarks }}</td>
-                                        <td><button class="btn dltbtnclr" data-bs-toggle="modal" data-bs-target="#deleteCategoryModal" wire:click="rmvCat({{ $category->id }})"><i class="fa-solid fa-trash"></i></button></td>
+                                        <td class="text-center"><button class="btn dltbtnclr" data-bs-toggle="modal" data-bs-target="#deleteCategoryModal" wire:click="rmvCat({{ $category->id }})"><i class="fa-solid fa-trash"></i></button></td>
                                     </tr>
                                 @endforeach
                             </tbody>
