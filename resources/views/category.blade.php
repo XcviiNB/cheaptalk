@@ -1,5 +1,5 @@
 @extends('base')
 
 @section('content')
-    <livewire:category.categories/>
+    @livewire('category.categories')
 @endsection

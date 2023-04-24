@@ -40,7 +40,7 @@
 
                         <div class="card-body text-center postcardbdclr">
                             <h5 style="font-family:Georgia, 'Times New Roman', Times, serif">{{ $post->title }}</h5>
-                            <img src="{{ asset('storage/' . $post->image) }}" alt="Post image">
+                            <img src="{{ Storage::url($post->image) }}" alt="Post image" class="w-50">
                             <h4 style="font-family: monospace">{{ $post->content }}</h4>
                         </div>
                     </div>

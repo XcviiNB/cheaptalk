@@ -16,8 +16,10 @@ class CategoryFactory extends Factory
      */
     public function definition(): array
     {
+        $categories = ['Comedy', 'Romance', 'Adventure'];
+        shuffle($categories);
         return [
-            'category'  => fake()->randomElement(['Comedy', 'Romance', 'Adventure']),
+            'category'  => array_pop($categories),
             'remarks'   => fake()->sentence()
         ];
     }

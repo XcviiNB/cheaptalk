@@ -1,5 +1,5 @@
 @extends('base')
 
 @section('content')
-    <livewire:posts.posts/>
+    @livewire('posts.posts')
 @endsection

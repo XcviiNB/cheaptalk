@@ -1,5 +1,5 @@
 @extends('base')
 
 @section('content')
-    @livewire('posts.create')
+    @livewire('authentication.register')
 @endsection

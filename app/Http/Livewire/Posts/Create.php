@@ -47,14 +47,4 @@ class Create extends Component
 
         return redirect('/posts');
     }
-
-    // public function saveImage() {
-    //     $tempPath = $this->image->store('temp');
-
-    //     $publicPath = Storage::disk('public')->putFile('images', new File($tempPath));
-
-    //     Image::create([
-    //         'filename' => $publicPath
-    //     ]);
-    // }
 }
